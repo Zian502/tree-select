@@ -114,6 +114,9 @@ class Select extends React.Component {
     clearIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     removeIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     switcherIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    // 向下兼容 doraemon v3
+    lableIsExpanded: PropTypes.bool,
+    onLable: PropTypes.func,
   };
 
   static childContextTypes = {
@@ -689,10 +692,22 @@ class Select extends React.Component {
 
   onTreeNodeSelect = (_, nodeEventInfo) => {
     const { valueList, valueEntities } = this.state;
-    const { treeCheckable, multiple } = this.props;
+    // 向下兼容 doraemon v3
+    const { treeCheckable, multiple, onLable, lableIsExpanded } = this.props;
     if (treeCheckable) return;
 
     if (!multiple) {
+      this.setOpenState(false);
+    }
+
+    // 向下兼容 doraemon v3
+    if (lableIsExpanded && onLable) {
+      // 目前不支持multiple情况下点击父节点展开子节点。
+      if (!nodeEventInfo.node.isLeaf()) {
+        onLable(nodeEventInfo);
+        this.setOpenState(true);
+        return;
+      }
       this.setOpenState(false);
     }
 
