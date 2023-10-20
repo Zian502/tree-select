@@ -9,10 +9,16 @@
     "tree-select"
   ],
   "homepage": "https://github.com/react-component/tree-select",
-  "author": "hualei5280@gmail.com",
+  "author": "yuanzhian",
+  "maintainers": [
+    {
+      "name": "yuanzhian",
+      "email": "yuanzhian@cai-inc.com"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/react-component/tree-select.git"
+    "url": "git@git.cai-inc.com:ZCY-FE/doraemon-component/dc-tree-select.git"
   },
   "bugs": {
     "url": "https://github.com/react-component/tree-select/issues"
