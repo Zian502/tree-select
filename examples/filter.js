@@ -1,9 +1,9 @@
 /* eslint react/no-multi-comp:0, no-console:0 */
 
-import 'rc-tree-select/assets/index.less';
+import '@zcy/dc-tree-select/assets/index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TreeSelect, { SHOW_PARENT } from 'rc-tree-select';
+import TreeSelect, { SHOW_PARENT } from '@zcy/dc-tree-select';
 import { gData } from './util';
 
 class Demo extends React.Component {

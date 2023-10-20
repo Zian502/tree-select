@@ -1,5 +1,5 @@
 {
-  "name": "rc-tree-select",
+  "name": "@zcy/dc-tree-select",
   "version": "2.9.4",
   "description": "tree-select ui component for react",
   "keywords": [

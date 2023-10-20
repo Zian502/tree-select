@@ -3,11 +3,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import TreeSelect from 'rc-tree-select';
+import TreeSelect from '@zcy/dc-tree-select';
 import Select from 'rc-select';
 import { createForm } from 'rc-form';
 import 'rc-select/assets/index.css';
-import 'rc-tree-select/assets/index.less';
+import '@zcy/dc-tree-select/assets/index.less';
 import { regionStyle, errorStyle } from './styles';
 import { gData } from './util';
 import './demo.less';

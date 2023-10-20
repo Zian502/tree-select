@@ -1,6 +1,6 @@
 /* eslint react/no-multi-comp:0, no-console:0 */
-import 'rc-tree-select/assets/index.less';
-import TreeSelect from 'rc-tree-select';
+import '@zcy/dc-tree-select/assets/index.less';
+import TreeSelect from '@zcy/dc-tree-select';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
